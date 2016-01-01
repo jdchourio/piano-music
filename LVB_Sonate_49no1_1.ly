@@ -13,9 +13,9 @@
   style = "Classical"
   copyright = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2007/January/24"
-  version = "2.10.3"
- footer = "Mutopia-2007/01/25-912"
+  lastupdated = "2016/January/01"
+  version = "2.10.4"
+ footer = "Mutopia-2016/01/01-912"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -39,8 +39,9 @@
  ees''8(~ ees''16 d''_\markup { \italic "cresc." } f'' e'' g'' f'' ees'' d'') 
  \break
  
- \grace { c''16[ d'' ees''] } d''8\p( c'') \grace { b'16[ c'' d''] } c''8( bes') \grace { a'16[ bes' c''] } bes'16( a' g' f' e' f' g' f')
- ees''8_\markup { \italic "dolce" }^[_( a'\staccato) a'\staccato_( a'\staccato)]
+ \grace { c''16[ d'' ees''] } d''8\p( c'') \grace { b'16[ c'' d''] } c''8( bes') 
+ \grace { a'16[ bes' c''] } bes'16( a' g' f' e' f' g' f')
+ ees''!8_\markup { \italic "dolce" }^[_( a'\staccato) a'\staccato_( a'\staccato)]
  << { bes'8.( d''16 } { s8 s8\turn } >> f''8) f''8\noBeam
  ees'''8[( a'') a''\staccato( a''\staccato)]
  \break
