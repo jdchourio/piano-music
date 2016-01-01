@@ -3,7 +3,7 @@
  \header {
   title = "Piano Sonate Opus 49 No. 1 (1st Movement: Andante)"
   subtitle = "fur das Pianoforte"
-  composer = "Ludwig Van Beethoven"
+  composer = "Ludwig van Beethoven"
   mutopiatitle = "Sonata No. 19 (1st Movement: Andante)"
   mutopiacomposer = "BeethovenLv"
   mutopiaopus = "Op. 49, No. 1"
@@ -30,24 +30,37 @@
  \override Score.MetronomeMark #'transparent = ##t
  \tempo 4 = 98
  \override TextScript #'padding = #2.0
- \repeat volta 2 { \partial 8 d'8\p^\markup { \large "Andante." } bes'8([ g' fis' g']) <d' c''>2\fp
- bes'8([ g' fis' g']) <g' ees''>2\fp d''8[ fis''( g'') d'']( c'')[ gis''( a'') c'']( bes')[ g''! a' ees''] g'8.([ a'32 g'] fis'8) d'
- bes'8([ g' fis' g']) <d' c''>2\fp bes'8([ g' fis' g']) ees''4.\fp
- ees''8(~ ees''16 d''_\markup { \italic "cresc." } f'' e'' g'' f'' ees'' d'')
- \grace { c''16[ d'' ees''] } d''8( c'') \grace { b'16[ c'' d''] } c''8( bes') \grace { a'16[ bes' c''] } bes'16( a' g' f' e' f' g' f')
- ees''8_\markup { \italic "dolce" }[( a'\staccato) a'\staccato( a'\staccato)]
- bes'8.^\markup { \translate #(cons 5 1) { \musicglyph #"scripts.turn" } }( d''16 f''8) f''8
- ees'''8[( a'') a''\staccato( a''\staccato)]
- bes''8.^\markup { \translate #(cons 5 1) { \musicglyph #"scripts.turn" } }( d'''16 f'''8) f'8
- ees''8[( a') a'\staccato( a'\staccato)]
- bes'8.^\markup { \translate #(cons 5 1) { \musicglyph #"scripts.turn" } }( c''16 d''16[ bes' c'' d''])
- ees''8.^\markup { \translate #(cons 5 1) { \musicglyph #"scripts.turn" } }( f''16 g''16[ a'' bes'' g''])
- e''16( f'' g'' f'') f''( ees'' d'' c'') cis'' d'' ees'' d'' f'' ees'' d'' c''
- bes'8.^\markup { \translate #(cons 5 1) { \musicglyph #"scripts.turn" } }( c''16 d''16[ bes' c'' d''])
- ees''16( f'' g'' a''!) c'''( bes'' a'' g'') g''( f'' e'' f'' a'' g'' f'' ees'') ees''( d'' cis'' d'' f'' ees'' d'' c'')
- bes'4 r8 c''16( d'') ees''8[( a') a'\staccato( a'\staccato)]
- bes'4 r8 c''16( d'') ees''8[( a') a'\staccato( a'\staccato)] <a' c''>4( bes'8) }
+ \repeat volta 2 { \partial 8 d'8\p^\markup { \large "Andante." } bes'8([ g' fis' g']) <d' c''>2_\markup \dynamic { mfp } 
+ bes'8([ g' fis' g']) <g' ees''>2_\markup \dynamic { mfp } d''8[ fis''( g'') d'']( c'')[ gis''( a'') c'']( 
+ \break 
+ 
+ bes'[ g''! a' ees'']) g'8.([ a'32 g'] fis'8) d'\noBeam
+ bes'8([ g' fis' g']) <d' c''>2_\markup \dynamic { mfp } bes'8([ g' fis' g']) ees''4.\fp
+ ees''8(~ ees''16 d''_\markup { \italic "cresc." } f'' e'' g'' f'' ees'' d'') 
  \break
+ 
+ \grace { c''16[ d'' ees''] } d''8\p( c'') \grace { b'16[ c'' d''] } c''8( bes') \grace { a'16[ bes' c''] } bes'16( a' g' f' e' f' g' f')
+ ees''8_\markup { \italic "dolce" }^[_( a'\staccato) a'\staccato_( a'\staccato)]
+ << { bes'8.( d''16 } { s8 s8\turn } >> f''8) f''8\noBeam
+ ees'''8[( a'') a''\staccato( a''\staccato)]
+ \break
+ 
+ << { bes''8.( d'''16 } { s8 s8\turn } >> f'''8) f'8\noBeam
+ ees''8^[_( a') a'\staccato_( a'\staccato)]
+ << { bes'8.( c''16 } { s8 s8\turn } >> d''16[ bes' c'' d''])
+ << { ees''8.( f''16 } { s8 s8\turn } >> g''16[ a'' bes'' g''])
+ e''16( f'' g'' f'') f''( ees'' d'' c'') 
+ \break
+ 
+ cis'' d'' ees'' d'' f'' ees'' d'' c'' 
+ << { bes'8.( c''16 } { s8 s8\turn } >> d''16[ bes' c'' d''])
+ ees''16( f'' g'' a''!) c'''( bes'' a'' g'') g''( f'' e'' f'' a'' g'' f'' ees'') ees''( d'' cis'' d'' f'' ees'' d'' c'')
+ \break
+ 
+ bes'4 r8 c''16( d'') ees''8^[_( a') a'\staccato_( a'\staccato)]
+ bes'4 r8 c''16( d'') ees''8^[_( a') a'\staccato_( a'\staccato)] <a' c''>4( bes'8) }
+ \break
+ 
  bes8^\trill\f f'8[( bes) bes bes^\trill] f'[( aes) aes aes^\trill] g8\sf([ bes ees' g']) << { f'8([ aes' d' bes]) } \\ { c'4\p aes } >>
  <g bes ees'>4 r16 g''( f'' ees''] d''8) r8 r16 aes''16( g'' f'' ees''8) r16 ees'''16( d''' ees''' d''' c''')
  b''16( c''' bes'' aes'' g'' f'' c''' bes'') aes''8( g'') r16 g''32([ f'' aes'' g'' f'' ees''])
@@ -85,15 +98,23 @@
  \key g \minor
  \time 2/4
  \repeat volta 2 { \partial 8 r8 r8 <bes d'>([ <a c'> <g bes>]) <fis a>([ <d fis> <e g> <fis a>])
- <g bes>([ <bes d'> <a c'> <g bes>]) c8[ ees g c'] bes4 r8 <bes d'> <fis d'>4 r8 <fis d'> <g d'>4 <c c'> <d bes>4( <d a>8) r8
+ <g bes>([ <bes d'> <a c'> <g bes>]) c8[ ees g c'] bes4 r8 <bes d'> <fis d'>4 r8 <fis d'> 
+ \break
+ 
+ <g d'>4 <c c'> \set doubleSlurs = ##t <d bes>4( <d a>8) \set doubleSlurs = ##f r8
  r8 <bes d'>8([ <a c'> <g bes>]) <fis a>([ <d fis> <e g> <fis a>]) <g bes>([ <bes d'> <a c'> <g bes>])
+ \mergeDifferentlyDottedOn
  << { c8[ ees g a] } \\ { c4. c8 } >> <d bes>4 r8 << { f8 g8[ c'] g[ c'] c'4 } \\ { d8 ees4 e f } >> r4
  a16 f' c' f' ees' f' c' f' d' f' bes f' d' f' bes f' a f' c' f' ees' f' c' f' d'16 f' bes f' d' f' bes f' a f' c' f' ees' f' c' f'
  d' f' bes f' aes f' bes f' g ees' bes ees' ees ees' bes ees' f d' bes d' f ees' a ees'
  <bes d'>4 r d'16 f' bes f' aes f' bes f' g ees' bes ees' ees ees' bes ees' d d' bes d' ees c' g c' f d' bes d' f ees' a ees'
  <bes d'>16( f' e' f' g' f' ees' d') c' f' ees' f' <f c'> f' ees' f' <bes d'>( f' e' f' g' f' ees' d')
- c'16 f' ees' f' <f c'> f' ees' f' <bes ees'>4( <bes d'>8) }
+ c'16 f' ees' f' <f c'> f' ees' f' 
+ \set doubleSlurs = ##t
+ <bes ees'>4( <bes d'>8) }
+ \set doubleSlurs = ##f
  \break
+ 
  bes,8_\trill f8[( bes,) bes, bes,_\trill] f8[( aes,) aes, aes,_\trill] g,8([ bes, ees g)] << { aes8( f) f( d) } \\ { aes,4 bes,4 } >>
  <ees, ees>8 \clef treble <ees' g'>8[ <ees' g'>] r r8 <f' aes'>[ <f' aes'>] r r8 <g' bes'>[ <g' bes'> <g' bes'>]
  <aes' c''>4 <bes' d''> r8 <ees' bes'>8[ <ees' g'>] r8 r8 <f' aes'>[ <f' aes'>] r r8 <g' bes'>[ <g' bes'> <g' bes'>]
